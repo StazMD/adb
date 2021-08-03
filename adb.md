@@ -1,3 +1,4 @@
+```adb
 adb devices - подключенные устройства
 adb connect {ip} - подключиться к устройству по IP адресу
 adb install path/app.apk - установка приложения
@@ -70,4 +71,4 @@ logcat - логи в реальном времени
 	-b events - что делают другие приложения
 		adb logcat | findstr com.android.chrome
 sqlite3 - работа с базой данных телефона
-
+```
