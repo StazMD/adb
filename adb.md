@@ -1,5 +1,5 @@
 ```adb
-adb devices - подключенные устройства
+adb devices - connected devices
 adb connect {ip} - подключиться к устройству по IP адресу
 adb install path/app.apk - установка приложения
 	adb install -e path/app.apk - переустановить с сохранением данных
