@@ -1,6 +1,6 @@
 # adb commands that I use in daily work:
 
-```adb
+```
 adb devices - connected devices
 
 adb connect {ip} - connect to device by IP address
