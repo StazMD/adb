@@ -72,7 +72,8 @@ adb shell - Linux shell on device
 	text 'text' - send text to device
 	keyevent 
 	tap {x} {y} - send tap to device on coordinates
-	swipe - swipe Example: input swipe 10 10 10 1000 - pull down the Notification Panel
+	swipe - swipe Ex.: input swipe 10 10 10 1000 - pull down the Notification Panel
+				  Ex.: input swipe 500 750 500 1200 - pull down to refresh application
 	press
 	roll
 
@@ -92,7 +93,7 @@ logcat - logs in real time
 	-S - silent
 	-b events - what other apps doing
 		adb logcat | findstr com.android.chrome
-	Ex.: adb logcat --pid=$(adb shell pidof -s com.facebook.katana)
+	Ex.: adb logcat --pid=$(adb shell pidof -s com.facebook.katana) - log the app
 	
 sqlite3 - device database (need root)
 ```
