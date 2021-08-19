@@ -92,6 +92,7 @@ logcat - logs in real time
 	-S - silent
 	-b events - what other apps doing
 		adb logcat | findstr com.android.chrome
-		
-sqlite3 - device database
+	Ex.: adb logcat --pid=$(adb shell pidof -s com.facebook.katana)
+	
+sqlite3 - device database (need root)
 ```
