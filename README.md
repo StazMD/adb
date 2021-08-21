@@ -99,7 +99,7 @@ sqlite3 - device database (need su)
 	Ex.: sqlite3 /data/data/com.facebook.katana/databases/database.db - open database.db from Facebook application
 	.schema - database schema
 	.ta - database tables
-	SELECT * FROM table - show all data from table 'table'
-	Ex.: UPDATE catalystLocalStorage SET value = '[{"institution_id":2,"date":"2021-08-21T12:46:24.849Z"},{"institution_id":19,"date":"2021-08-28T07:45:42.583Z"}]' WHERE key = 'institutionsWithRating';
+	SELECT * FROM table; - show all data from table 'table'
+	Ex.: UPDATE catalystLocalStorage SET value = '[{"institution_id":2,"date":"2021-08-21T12:46:24.849Z"},{"institution_id":19,"date":"2021-08-21T12:33:00.583Z"}]' WHERE key = 'institutionsWithRating';
 ```
 
