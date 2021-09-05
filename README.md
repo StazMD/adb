@@ -16,8 +16,8 @@ adb backup - backup application
 	-obb/-noobb - include or not in backup .obb files. Not including by default.
 	-shared/-noshared - include or not in backup data from SD card. Not including by default.
 	-all - backup all installed apps.
-	-system/-nosystem - include or not in backup system applications. Include by default.
-	Example: abd backup -nosystem -apk -all -f "C:\apkbackups\backup.ab" 
+	-system/-nosystem - include or not in backup system applications. Included by default.
+	Ex.: abd backup -nosystem -apk -all -f "C:\apkbackups\backup.ab" 
 
 adb restore {path_to_backup} - restoring backup
 
@@ -27,10 +27,12 @@ adb shell - Linux shell on device
 
  df - disk space details
 	-h - disk space details in KB/MB format
-	/system - for specific folder desk space details. Ex.: adb shell df /system
-  du - disk space used by the specified files and subdirectories.
+	/system - for specific folder desk space details. 
+	Ex.: adb shell df /system
+ du - disk space used by the specified files and subdirectories.
 	-h - disk space used by the specified files and subdirectories in KB/MB format
-	/system - for specific folder and sub-directories desk space details. Ex.: adb shell du /system
+	/system - for specific folder and sub-directories desk space details. 
+	Ex.: adb shell du /system
 
  screencap - screenshot. Example: adb shell screencap /sdcard/screen.png
 	adb pull /sdcard/screen.png - pull screenshot file
@@ -38,9 +40,9 @@ adb shell - Linux shell on device
  screenrecord - video recording
  	--size 1280x720 - screen resolution (if not specified - device's default)
  	--bit-rate 6000000 (6mbit/s)
- 	--time-limit 10 - video length
+ 	--time-limit 10 - video length is 10s
  	--verbose /sdcard/video.mp4 - file path
- 		adb pull /sdcard/video.mp4 - push video file
+ 		adb pull /sdcard/video.mp4 - pull video file
 
  pm (package manager)
  	list packages - list of installed applications
@@ -56,7 +58,7 @@ adb shell - Linux shell on device
  	start -n {package_name/runner_class} - run app with activity
  	monkey -p {package_name} 1 - run monkey-test in app with 1 action (workaround to run app)
  	force-stop {package_name} - close app
- 	start -a android.intent.action.VIEW 'www.google.com' - open browser and Google page
+ 	start -a android.intent.action.VIEW 'www.google.com' - open browser on Google page
 
  svc 
  	wifi disable/enable - disable or enable WiFi
@@ -70,14 +72,13 @@ adb shell - Linux shell on device
 
  input
 	text 'text' - send text to device
-	keyevent 
+	keyevent - send keyevent to device
 	tap {x} {y} - send tap to device on coordinates
 	swipe - swipe Ex.: input swipe 10 10 10 1000 - pull down the Notification Panel
-				  Ex.: input swipe 500 750 500 1200 - pull down to refresh application
-	press
-	roll
+				  Ex.: input swipe 500 750 500 1200 - pull down to refresh app screen
 
- sh - run scripts files with `.sh` Ex.: adb shell sh /sdcard/file_name.sh
+ sh - run scripts files with `.sh`
+ 	Ex.: adb shell sh /sdcard/file_name.sh
 
  wm density 420 - change DPI (need root)
  setprop ctl.restart zygote - soft restart
